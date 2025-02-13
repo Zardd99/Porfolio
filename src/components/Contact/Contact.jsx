@@ -24,7 +24,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact bg-gray-100 py-12">
+    <section className="contact bg-gray-100 py-12" id="contact">
       <div className="container mx-auto px-4">
         <TextContent title={"Contact Me"} />
         <div className="p-4"></div>
