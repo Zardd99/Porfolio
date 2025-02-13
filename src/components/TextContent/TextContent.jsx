@@ -1,21 +1,11 @@
 import PropTypes from "prop-types";
 
-const TEXTCONTENT__TEXT = [
-  {
-    title: "Featured",
-  },
-  {
-    title: "Contact",
-  },
-];
-
-const TextContent = ({ index }) => {
-  const { title } = TEXTCONTENT__TEXT[index];
+const TextContent = ({ title }) => {
   return (
     <div>
       <div className="p-4"></div>
       <div className="text-center">
-        <h2 className="text-6xl font-bold leading-0.5 tracking-tighter">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-0.5 tracking-tighter">
           {title}
         </h2>
       </div>
@@ -24,7 +14,7 @@ const TextContent = ({ index }) => {
 };
 
 TextContent.propTypes = {
-  index: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default TextContent;

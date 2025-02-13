@@ -16,7 +16,7 @@ const Featured = () => {
     <>
       <section className="featured container" id="featured">
         <div className="container">
-          <TextContent index={0} />
+          <TextContent title={"Featured"} />
         </div>
         <div className="p-4"></div>
         <div className="featured__content container flex">
@@ -33,15 +33,15 @@ const Featured = () => {
         <div className="p-4"></div>
         <div className="featured__details container flex w-full justify-between">
           <div>
-            <h4 className="text-xl">Tech Stack</h4>
-            <ul className="text-lg text-slate-400 mt-2">
+            <h4 className="text-lg md:text-xl">Tech Stack</h4>
+            <ul className="text-base md:text-lg text-slate-400 mt-2">
               <li>TailwindCSS</li>
               <li>ReactJS</li>
-              <li>React-Hook-Form</li>
-              <li>NextJS</li>
-              <li>Axios</li>
-              <li>Supabase</li>
-              <li>Stripe</li>
+              <li>PlaceHolder</li>
+              <li>PlaceHolder</li>
+              <li>PlaceHolder</li>
+              <li>PlaceHolder</li>
+              <li>PlaceHolder</li>
             </ul>
           </div>
           <div>
