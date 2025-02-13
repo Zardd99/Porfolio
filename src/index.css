@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 @theme {
@@ -26,10 +25,6 @@
   --size-9xl: 8rem;
   --size-10xl: 10rem;
 }
-* {
-  line-height: calc(1em + 0.5rem);
-  box-sizing: border-box;
-}
 
 @layer base {
   html {
@@ -37,19 +32,14 @@
   }
 
   body {
-    background-color: var(--color-light);
-    color: var(--color-dark);
-    transition: 0.5s ease-in;
+    @apply bg-light text-dark transition-colors duration-500 ease-in;
   }
 
   body,
   button,
   input,
   textarea {
-    font-family: var(--font-display);
-    font-size: var(--size-base);
-    letter-spacing: -0.05em;
-    line-height: 0.9;
+    @apply font-display text-base tracking-tighter leading-[0.9];
   }
 
   h1,
@@ -57,13 +47,11 @@
   h3,
   h4,
   h5 {
-    font-weight: 600;
-    line-height: 0.9;
-    letter-spacing: -0.05em;
+    @apply font-semibold leading-[0.9] tracking-tighter;
   }
 
   p {
-    letter-spacing: -0.05em;
+    @apply tracking-tighter;
   }
 
   img,
@@ -71,37 +59,26 @@
   video,
   canvas,
   svg {
-    display: block;
-    max-width: 100%;
-    user-select: none;
+    @apply block max-w-full select-none;
   }
 
   button {
-    display: inline-block;
-    outline: none;
-    padding: 0;
-    border: none;
-    background: none;
-    cursor: pointer;
-    color: inherit;
+    @apply inline-block outline-none p-0 border-0 bg-none cursor-pointer text-inherit;
   }
 
   ul {
-    list-style: none;
+    @apply list-none;
   }
 
   a {
-    transition: 0.5s ease-in;
-    color: var(--color-dark);
-    text-decoration: none;
+    @apply transition-colors duration-500 ease-in text-dark no-underline;
   }
 
   hr {
-    transition: 0.5s ease-in;
-    border: 1px solid var(--color-dark);
+    @apply transition-all duration-500 ease-in border border-dark;
   }
 
   strong {
-    color: var(--color-indigo-500);
+    @apply text-indigo-500;
   }
 }
