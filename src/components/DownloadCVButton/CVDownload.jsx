@@ -12,7 +12,7 @@ const CVDownload = () => {
 
   return (
     <a
-      className="hero__button font-semibold bg-blue-500 p-4 rounded-4xl text-white hover:bg-blue-400 hover:scale-105 transition-transform duration-300 ease-in-out"
+      className="hero__button font-semibold bg-blue-500 p-4 rounded-4xl text-white text-xs sm:text-sm md:text-base hover:bg-blue-400 hover:scale-105 transition-transform duration-300 ease-in-out"
       href="#hero"
       onClick={handleDownload}
     >

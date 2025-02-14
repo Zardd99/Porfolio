@@ -1,3 +1,6 @@
+import "./ImageGrid.css";
+
+import { useEffect, useRef } from "react";
 import img from "../../assets/Feature.jpg";
 import project1 from "../../assets/project1.png";
 import project2 from "../../assets/project2.webp";
@@ -19,11 +22,41 @@ const images = [
 ];
 
 const ImageGrid = () => {
+  const imageRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("slide-in");
+          } else {
+            entry.target.classList.remove("slide-in");
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    imageRefs.current.forEach((image) => {
+      if (image) observer.observe(image);
+    });
+
+    return () => {
+      imageRefs.current.forEach((image) => {
+        if (image) observer.unobserve(image);
+      });
+    };
+  }, []);
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {images.map((src, index) => (
         <div
-          className="rounded-xl flex items-center justify-center relative overflow-hidden p-4"
+          ref={(el) => (imageRefs.current[index] = el)}
+          className="rounded-xl flex items-center justify-center relative overflow-hidden p-4 opacity-0 transform transition duration-1000 ease-in-out"
           key={index}
         >
           <img

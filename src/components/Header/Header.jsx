@@ -38,7 +38,7 @@ const Header = () => {
       className="flex justify-between items-center py-4 container text-black relative top-0 left-0"
       id="header"
     >
-      <h1 className="uppercase font-semibold text-2xl">SAKDA</h1>
+      <h1 className="uppercase font-semibold text-2xl">ASTA</h1>
       <nav className="flex">
         <ul className="md:flex justify-between hidden gap-4">
           {HEADER_MENU_ITEMS.map((item, index) => (

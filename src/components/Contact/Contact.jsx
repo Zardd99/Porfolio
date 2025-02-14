@@ -24,11 +24,11 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact bg-gray-100 py-12" id="contact">
+    <section className="contact container bg-light py-12" id="contact">
       <div className="container mx-auto px-4">
         <TextContent title={"Contact Me"} />
         <div className="p-4"></div>
-        <div className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <div className="max-w-md mx-auto bg-light p-8 rounded-lg shadow-lg">
           <form onSubmit={handleSubmit}>
             {/* Name Field */}
             <div className="mb-4">
