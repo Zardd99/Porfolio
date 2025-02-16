@@ -3,12 +3,12 @@ import "./ImageGrid.css";
 import { useEffect, useRef } from "react";
 import img from "../../assets/Feature.jpg";
 import project1 from "../../assets/Feature.jpg";
-import project2 from "../../assets/project2.webp";
-import project3 from "../../assets/project3.webp";
-import project4 from "../../assets/project4.jpeg";
-import project5 from "../../assets/project5.png";
-import project6 from "../../assets/project6.png";
-import project7 from "../../assets/project7.png";
+import project2 from "../../assets/Project2.webp";
+import project3 from "../../assets/Project3.webp";
+import project4 from "../../assets/Project4.jpeg";
+import project5 from "../../assets/Project5.png";
+import project6 from "../../assets/Project6.png";
+import project7 from "../../assets/Project7.png";
 
 const images = [
   project1,
