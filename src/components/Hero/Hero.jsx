@@ -20,7 +20,7 @@ const Hero = () => {
   return (
     <>
       <section
-        className="hero container flex flex-col gap-8 items-center justify-center mt[50%] leading-[0.9em] text-center tracking-tighter h-[calc(100vh-90px)]"
+        className="hero container flex flex-col gap-8 items-center justify-center mt[50%] leading-[0.9em] text-center tracking-tighter h-[calc(100vh-90px)]   "
         id="hero"
       >
         <h2 className="hero__subtitle text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-blue-400">

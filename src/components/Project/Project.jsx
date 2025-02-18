@@ -1,10 +1,36 @@
 import { useEffect, useRef } from "react";
 import TextContent from "../TextContent/TextContent";
-import img from "../../assets/Project2.webp";
-import img2 from "../../assets/Feature.jpg";
+import SamsungClone from "../../assets/Project7.png";
+import Todo from "../../assets/Todo.png";
+import MovieSite from "../../assets/Movie-site.png";
 
 const Project = () => {
   const imageRefs = useRef([]);
+
+  const projects = [
+    {
+      title: "Samsung Clone",
+      description:
+        "Clone Samsung Web Application using ReactJS <br /> <br /> ..On Going",
+      image: SamsungClone,
+      alt: "Samsung Clone App",
+      link: null,
+    },
+    {
+      title: "Todo",
+      description: "Todo Web Application using ReactJS",
+      image: Todo,
+      alt: "Todo App",
+      link: "https://todo-seven-rouge.vercel.app/",
+    },
+    {
+      title: "Movie Site",
+      description: "Movie Web Application using ReactJS",
+      image: MovieSite,
+      alt: "Movie Site App",
+      link: "https://movie-site-mauve-one.vercel.app/",
+    },
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -39,44 +65,31 @@ const Project = () => {
         <TextContent title={"Project"} />
         <div className="p-10"></div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* First Row */}
-          <div className="flex flex-col items-center justify-center order-1 md:order-none">
-            <h4 className="text-slate-600 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold uppercase mb-4">
-              Samsung Clone
-            </h4>
-            <p className="text-slate-500 text-[0.5rem] sm:text-xs md:text-sm lg:text-base xl:text-lg font-light tracking-tighter leading-[0.9rem] text-center">
-              Clone Samsung Web Application using ReactJS <br /> <br /> ..On
-              Going
-            </p>
-          </div>
-          <div className="flex flex-col items-center justify-center order-2 md:order-none">
-            <img
-              ref={(el) => (imageRefs.current[0] = el)}
-              className="object-cover rounded-2xl opacity-0 transform transition duration-1000 ease-in-out hover:cursor-pointer"
-              src={img}
-              alt="Todo App"
-            />
-          </div>
-          {/* Second Row */}
-          <div className="flex flex-col items-center justify-center order-4 md:order-none">
-            <img
-              ref={(el) => (imageRefs.current[1] = el)}
-              className="object-cover rounded-2xl opacity-0 transform transition duration-1000 ease-in-out hover:cursor-pointer"
-              src={img2}
-              alt="Calculator App"
-              onClick={() =>
-                window.open("https://todo-seven-rouge.vercel.app/")
-              }
-            />
-          </div>
-          <div className="flex flex-col items-center justify-center order-3 md:order-none">
-            <h4 className="text-slate-600 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold uppercase mb-4">
-              Todo
-            </h4>
-            <p className="text-slate-500 text-[0.5rem] sm:text-xs md:text-sm lg:text-base xl:text-lg font-light tracking-tighter leading-[0.9rem] text-center">
-              Todo Web Application using ReactJS
-            </p>
-          </div>
+          {projects.map((project, index) => (
+            <>
+              {/* Text Section */}
+              <div className="flex flex-col items-center justify-center">
+                <h4 className="text-indigo-600 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold uppercase mb-4">
+                  {project.title}
+                </h4>
+                <p
+                  className="text-slate-500 text-[0.5rem] sm:text-xs md:text-sm lg:text-base xl:text-lg font-light tracking-tighter leading-[0.9rem] text-center"
+                  dangerouslySetInnerHTML={{ __html: project.description }}
+                />
+              </div>
+
+              {/* Image Section */}
+              <div className="flex flex-col items-center justify-center">
+                <img
+                  ref={(el) => (imageRefs.current[index] = el)}
+                  className="object-cover rounded-2xl opacity-0 transform transition duration-1000 ease-in-out hover:cursor-pointer"
+                  src={project.image}
+                  alt={project.alt}
+                  onClick={() => project.link && window.open(project.link)}
+                />
+              </div>
+            </>
+          ))}
         </div>
       </section>
     </div>

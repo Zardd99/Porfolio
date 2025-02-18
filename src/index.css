@@ -11,6 +11,15 @@
     @apply bg-light text-dark transition-colors duration-500 ease-in;
   }
 
+  .dark body {
+    --color-light: #020617;
+    --color-dark: #f1f5f9;
+    --color-indigo-500: #818cf8;
+    --color-slate-400: #cbd5e1;
+    --color-slate-200: #475569;
+    @apply bg-dark text-light;
+  }
+
   body,
   button,
   input,
@@ -50,12 +59,20 @@
     @apply transition-colors duration-500 ease-in text-dark no-underline;
   }
 
+  .dark a {
+    @apply text-light;
+  }
+
   hr {
-    @apply transition-all duration-500 ease-in border border-dark;
+    @apply transition-all duration-500 ease-in border border-dark dark:border-light;
   }
 
   strong {
     @apply text-indigo-500;
+  }
+
+  .dark strong {
+    @apply text-indigo-400;
   }
 }
 
@@ -65,21 +82,5 @@
   --color-indigo-500: #6366f1;
   --color-slate-400: #94a3b8;
   --color-slate-200: #e2e8f0;
-
   --font-display: "Poppins", "sans-serif";
-  /* --size-xxs: 0.5rem;
-  --size-xs: 0.75rem;
-  --size-sm: 0.875rem;
-  --size-base: 1rem;
-  --size-lg: 1.125rem;
-  --size-xl: 1.25rem;
-  --size-2xl: 1.5rem;
-  --size-3xl: 1.875rem;
-  --size-4xl: 2.25rem;
-  --size-5xl: 3rem;
-  --size-6xl: 3.75rem;
-  --size-7xl: 4.5rem;
-  --size-8xl: 6rem;
-  --size-9xl: 8rem;
-  --size-10xl: 10rem; */
 }
