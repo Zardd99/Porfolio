@@ -34,7 +34,7 @@ const Contact = () => {
             <div className="mb-4">
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="block text-sm font-medium text-gray-700 dark:text-light mb-2"
               >
                 Name
               </label>
@@ -54,7 +54,7 @@ const Contact = () => {
             <div className="mb-4">
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="block text-sm font-medium text-gray-700 dark:text-light mb-2"
               >
                 Email
               </label>
@@ -74,7 +74,7 @@ const Contact = () => {
             <div className="mb-6">
               <label
                 htmlFor="message"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="block text-sm font-medium text-gray-700 dark:text-light mb-2"
               >
                 Message
               </label>
