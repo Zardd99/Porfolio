@@ -1,0 +1,37 @@
+/* Add these if not using Tailwind */
+.project-card {
+  transition: all 0.3s ease;
+}
+
+.project-image {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Smooth transitions for transform properties */
+.transform {
+  transition-property: transform, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Prevent layout shift during image loading */
+img {
+  background: linear-gradient(120deg, #f0f0f0 25%, #ffffff 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 2s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  img {
+    background: linear-gradient(120deg, #1a1a1a 25%, #2d2d2d 50%, #1a1a1a 75%);
+  }
+}

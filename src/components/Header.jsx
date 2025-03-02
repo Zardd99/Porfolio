@@ -1,4 +1,4 @@
-import CVDownload from "../DownloadCVButton/CVDownload";
+import CVDownload from "./CVDownload";
 import { useState, useEffect } from "react";
 
 const HEADER_MENU_ITEMS = [
@@ -17,10 +17,6 @@ const HEADER_MENU_ITEMS = [
   {
     id: "contact",
     title: "Contact",
-  },
-  {
-    id: "projects",
-    title: "Go See Projects",
   },
 ];
 

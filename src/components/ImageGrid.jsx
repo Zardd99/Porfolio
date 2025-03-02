@@ -1,9 +1,9 @@
-import "./ImageGrid.css";
+import "./css/ImageGrid.css";
 
 import { useEffect, useRef } from "react";
-import project1 from "../../assets/Project2.webp";
-import MovieSite from "../../assets/Movie-site.png";
-import Todo from "../../assets/Todo.png";
+import project1 from "../assets/Project2.webp";
+import MovieSite from "../assets/Movie-site.png";
+import Todo from "../assets/Todo.png";
 
 const images = [project1, Todo, MovieSite];
 const links = [

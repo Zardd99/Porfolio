@@ -1,12 +1,15 @@
-import TextContent from "../TextContent/TextContent";
-import ImageGrid from "../Img-grid/ImageGrid";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact } from "react-icons/fa";
+import { TbBrandTailwind } from "react-icons/tb";
+
+import TextContent from "./TextContent";
+import ImageGrid from "./ImageGrid";
 
 const FEATURE__DATA = [
   {
     subtitle: "Featured Project",
     title: "CHIN SAKDA",
     description:
-      "Some Project I have build through out my journey to becoming a professional Front-End Developer.",
+      "Some projects I have built throughout my journey to becoming a professional Front-End Developer.",
   },
 ];
 
@@ -37,22 +40,35 @@ const Featured = () => {
         <div className="featured__details container flex flex-col md:flex-row gap-4 md:gap-0 w-full justify-between">
           <div>
             <h4 className="text-lg md:text-xl">Tech Stack</h4>
-            <ul className="text-base md:text-lg text-slate-400 mt-2">
-              <li>TailwindCSS</li>
-              <li>ReactJS</li>
-              <li>PlaceHolder</li>
-              <li>PlaceHolder</li>
-              <li>PlaceHolder</li>
-              <li>PlaceHolder</li>
-              <li>PlaceHolder</li>
+            <ul className="flex flex-wrap gap-4 mt-2">
+              <li className="flex items-center gap-2 text-base md:text-lg text-slate-400 hover:text-indigo-500 transition-colors duration-300">
+                <FaHtml5 className="text-orange-500" /> HTML
+              </li>
+              <li className="flex items-center gap-2 text-base md:text-lg text-slate-400 hover:text-indigo-500 transition-colors duration-300">
+                <FaCss3Alt className="text-blue-500" /> CSS
+              </li>
+              <li className="flex items-center gap-2 text-base md:text-lg text-slate-400 hover:text-indigo-500 transition-colors duration-300">
+                <FaJs className="text-yellow-500" /> JavaScript
+              </li>
+              <li className="flex items-center gap-2 text-base md:text-lg text-slate-400 hover:text-indigo-500 transition-colors duration-300">
+                <TbBrandTailwind className="text-teal-500" /> TailwindCSS
+              </li>
+              <li className="flex items-center gap-2 text-base md:text-lg text-slate-400 hover:text-indigo-500 transition-colors duration-300">
+                <FaReact className="text-cyan-500" /> ReactJS
+              </li>
+              <li className="flex items-center gap-2 text-base md:text-lg text-slate-400 hover:text-indigo-500 transition-colors duration-300">
+                <FaReact className="text-cyan-500" /> React Hooks
+              </li>
             </ul>
           </div>
+
           <div>
             <h4 className="text-xl">Project Type</h4>
             <ul className="text-lg text-slate-400 mt-2">
               <li>Fullstack Jamstack</li>
             </ul>
           </div>
+
           <div>
             <h4 className="text-xl">Time Line</h4>
             <ul className="text-lg text-slate-400 mt-2">
