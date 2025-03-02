@@ -18,6 +18,10 @@ const HEADER_MENU_ITEMS = [
     id: "contact",
     title: "Contact",
   },
+  {
+    id: "projects",
+    title: "Go See Projects",
+  },
 ];
 
 const Header = () => {
