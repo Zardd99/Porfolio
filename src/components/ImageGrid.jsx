@@ -4,8 +4,9 @@ import { useEffect, useRef } from "react";
 import project1 from "../assets/Project2.webp";
 import MovieSite from "../assets/Movie-site.png";
 import Todo from "../assets/Todo.png";
+import FinalExam from "../assets/FinalExam.png";
 
-const images = [project1, Todo, MovieSite];
+const images = [project1, Todo, MovieSite, FinalExam];
 const links = [
   {
     link: "",
@@ -18,6 +19,10 @@ const links = [
   {
     link: "https://movie-site-mauve-one.vercel.app/",
     title: "Movie App",
+  },
+  {
+    link: "https://project-final-exam.vercel.app/",
+    title: "Final Exam Of Instinct Institute",
   },
 ];
 

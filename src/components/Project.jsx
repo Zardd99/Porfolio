@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import SamsungClone from "../assets/Project7.png";
 import Todo from "../assets/Todo.png";
 import MovieSite from "../assets/Movie-site.png";
+import FinalExam from "../assets/FinalExam.png";
 
 const ProjectCard = ({ project, index, textRefs, imageRefs }) => {
   const descriptionLines = project.description.split("\n");
@@ -77,6 +78,13 @@ const Project = () => {
       image: MovieSite,
       alt: "Movie Database Preview",
       link: "https://movie-site-mauve-one.vercel.app/",
+    },
+    {
+      title: "Final Exam at Instinct Institute",
+      description: "Feature TailwindCSS Version 4 ,ReactJS and VITE",
+      image: FinalExam,
+      alt: "Final Exam Preview",
+      link: "https://project-final-exam.vercel.app/",
     },
   ];
 
