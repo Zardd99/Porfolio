@@ -11,7 +11,7 @@ const HEADER_MENU_ITEMS = [
     title: "Feature",
   },
   {
-    id: "project",
+    id: "projects",
     title: "Project",
   },
   {
