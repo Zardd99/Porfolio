@@ -37,7 +37,7 @@ const Featured = () => {
           </div>
         </div>
         <div className="p-4"></div>
-        <div className="featured__details container flex flex-col md:flex-row gap-4 md:gap-0 w-full justify-between">
+        <div className="featured__details container flex flex-col md:flex-row gap-4 md:gap-0 justify-between">
           <div>
             <h4 className="text-lg md:text-xl">Tech Stack</h4>
             <ul className="flex flex-wrap gap-4 mt-2">

@@ -5,6 +5,7 @@ import SamsungClone from "../assets/Project7.png";
 import Todo from "../assets/Todo.png";
 import MovieSite from "../assets/Movie-site.png";
 import FinalExam from "../assets/FinalExam.png";
+import Restaurant from "../assets/Restaurant_Website.png";
 
 const ProjectCard = ({ project, index, textRefs, imageRefs }) => {
   const descriptionLines = project.description.split("\n");
@@ -13,7 +14,7 @@ const ProjectCard = ({ project, index, textRefs, imageRefs }) => {
     <article className="group relative flex flex-col items-center gap-4 w-full">
       <div
         ref={(el) => (textRefs.current[index] = el)}
-        className="opacity-0 transition-all duration-700 ease-out translate-y-8 text-center w-full"
+        className="opacity-0 transition-all duration-700 ease-out translate-y-8 text-center w-full h-25"
       >
         <h3 className="text-xl font-bold text-indigo-600 mb-2 sm:text-2xl lg:text-3xl">
           {project.title}
@@ -33,12 +34,8 @@ const ProjectCard = ({ project, index, textRefs, imageRefs }) => {
           src={project.image}
           alt={project.alt}
           onClick={() => project.link && window.open(project.link)}
-          className="opacity-0 transition-all duration-700 ease-out translate-y-8 object-cover w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 cursor-pointer transform hover:scale-105 active:scale-95 hover:shadow-xl"
+          className="opacity-0 transition-all duration-700 ease-out translate-y-8 object-cover w-full h-full sm:h-56 md:h-64 lg:h-72 xl:h-80 cursor-pointer group-hover:scale-105 active:scale-95 hover:shadow-xl"
           role={project.link ? "button" : undefined}
-          tabIndex={project.link ? 0 : -1}
-          onKeyPress={(e) =>
-            project.link && e.key === "Enter" && window.open(project.link)
-          }
         />
         {!project.link && (
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
@@ -85,6 +82,13 @@ const Project = () => {
       image: FinalExam,
       alt: "Final Exam Preview",
       link: "https://project-final-exam.vercel.app/",
+    },
+    {
+      title: "Restaurant Website",
+      description: "Feature TailwindCSS Version 4 ,ReactJS and VITE",
+      image: Restaurant,
+      alt: "Restaurant Website Preview",
+      link: "https://frond-end-back-end-final-project.vercel.app/",
     },
   ];
 
@@ -156,6 +160,23 @@ const Project = () => {
       </div>
     </section>
   );
+};
+
+import PropTypes from "prop-types";
+
+ProjectCard.propTypes = {
+  project: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    link: PropTypes.string,
+  }).isRequired,
+  index: PropTypes.number.isRequired,
+  textRefs: PropTypes.shape({ current: PropTypes.arrayOf(PropTypes.object) })
+    .isRequired,
+  imageRefs: PropTypes.shape({ current: PropTypes.arrayOf(PropTypes.object) })
+    .isRequired,
 };
 
 export default Project;
