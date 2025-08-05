@@ -2,8 +2,8 @@ const BUTTON_TEXT = "Download CV";
 const CVDownload = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "./CV_resume.pdf";
-    link.download = "CV_resume.pdf";
+    link.href = "./Resume.pdf";
+    link.download = "Resume.pdf";
 
     document.body.appendChild(link);
     link.click();
